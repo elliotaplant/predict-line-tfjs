@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Linear Regression with TensorFlow</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style media="screen">
+      body {
+        font-family: monospace, sans-serif;
+        text-align: center;
+      }
+      canvas {
+        margin: 0 auto;
+        display: block;
+        box-shadow: 0px 0px 10px 2px black;
+        border-radius: 10px;
+      }
+      .controls {
+        margin-bottom: 1em;
+      }
+      label {
+        display: block;
+        margin-bottom: 1em;
+      }
+      button {
+        width: 80%;
+        max-width: 400px;
+        padding: 0.5em;
+        margin: 0 auto;
+      }
+      p {
+        max-width: 600px;
+        margin: 0 auto 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linear regression with TensorFlow.js</h1>
+    <p>
+      Click the black area to add points to the screen, and then let the TensorFlow optimizer create a best fit line for the points.
+    </p>
+    <div class="controls">
+      <label>Learning Rate: <input type="number" id="learningRate" value="0.5" step="0.1"></label>
+      <label>Autofit: <input type="checkbox" id="autoFit" checked></label>
+      <button type="button" id="learnBtn" style="display: none">Learn</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="script.js">
+
+    </script>
+  </body>
+</html>
