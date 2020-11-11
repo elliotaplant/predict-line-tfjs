@@ -74,7 +74,6 @@ function mousePressed() {
   brain.addPoint(mouseX, mouseY);
 }
 function keyPressed() {
-  console.log('keyCode', keyCode);
   if (keyCode === 32) {
     brain.learn();
   }
