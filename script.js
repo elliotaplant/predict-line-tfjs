@@ -4,9 +4,8 @@ class Brain {
     this.width = 600;
     this.height = 400;
     this.points = [];
-    this.learningRate = 0.02;
-    this.momentum = 0.02;
-    this.optimizerName = 'momentum';
+    this.learningRate = 0.1;
+    this.optimizerName = 'sgd';
     this.learn = this.learn.bind(this);
     this.numLearns = 0;
     this.prevCost = 0;
@@ -68,11 +67,7 @@ class Brain {
       }
 
       if (needsNewOpt) {
-        if (this.optimizerName === 'momentum') {
-          this.optimizer = tf.train.momentum(this.learningRate, 0.1);
-        } else {
-          this.optimizer = tf.train[this.optimizerName](this.learningRate);
-        }
+        this.optimizer = tf.train[this.optimizerName](this.learningRate);
       }
     });
 
