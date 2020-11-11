@@ -14,7 +14,7 @@ class Brain {
   }
 
   init() {
-    this.learningRate = JSON.parse(localStorage.getItem('learningRate') || '0.02');
+    this.learningRate = JSON.parse(localStorage.getItem('learningRate') || '0.1');
     autoFit.checked = JSON.parse(localStorage.getItem('autofit') || 'true');
     this.optimizerName = localStorage.getItem('optimizer') || 'sgd';
     this.m = tf.variable(tf.scalar(random(-1, 1)));
